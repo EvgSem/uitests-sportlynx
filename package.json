@@ -1,0 +1,18 @@
+{
+  "name": "ui-tests",
+  "version": "1.0.0",
+  "description": "ui tests for sportlynx",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgSem/uitests-sportlynx.git"
+  },
+  "author": "Ievgeniia Bondini",
+  "license": "MIT",
+  "dependencies": {
+    "protractor": "^4.0.4"
+  }
+}

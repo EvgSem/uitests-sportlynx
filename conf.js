@@ -2,7 +2,7 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   specs: [
-    'features/*.feature' 
+    'e2e/features/*.feature' 
 	],
   baseUrl: 'https://appdev1.sportlynx.com/clubadmin/login',
   params: {
@@ -18,8 +18,8 @@ exports.config = {
     format: 'pretty',
     keepAlive: false,
     require: [
-      'methods/*.steps.js',
-      'features/env.js',
+      'e2e/spec/*.spec.js',
+      'e2e/features/env.js',
       'node_modules/cucumberjs-junitxml/reporter/reporter.js'
     ],
   },

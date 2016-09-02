@@ -1,10 +1,16 @@
 exports.config = {
-    framework: 'custom',
-    frameworkPath: require.resolve('protractor-cucumber-framework'),
-    seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: [
-    'features/*.feature' // this gets ignored when running from gulp!
-  	],
+  framework: 'custom',
+  frameworkPath: require.resolve('protractor-cucumber-framework'),
+  specs: [
+    'features/*.feature' 
+	],
+  baseUrl: 'https://appdev1.sportlynx.com/clubadmin/login',
+  params: {
+    login: {
+      email: 'rdeslonde@hotmail.com',
+      password: 'password'
+    }
+  },
 	capabilities: {
     'browserName': 'chrome'
   },

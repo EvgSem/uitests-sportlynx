@@ -12,7 +12,12 @@ exports.config = {
     }
   },
 	capabilities: {
-    'browserName': 'chrome'
+    'browserName': 'chrome',
+    'chromeOptions' : {
+       args: ['--lang=en',
+              '--window-size=1920,1080',
+              'incognito']
+    },
   },
   cucumberOpts: {
     format: 'pretty',

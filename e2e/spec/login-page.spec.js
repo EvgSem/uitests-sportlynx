@@ -3,11 +3,10 @@ var expect = chai.expect;
 var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 var logInPage = require('./login.page.js');  
-var homePage = require('./home.page.js');  
 
 module.exports = function () {
 	this.Given(/^I navigate to login page$/, function (callback) {
-	    browser.get(browser.baseUrl)
+    	browser.get(browser.baseUrl)
 	    .then(callback);
 	});
 
@@ -31,9 +30,9 @@ module.exports = function () {
 		.then(callback);
 	});
 
-	this.Then(/^I should see welcome title '(.*)'$/, function (value, callback) {
-		var homePageObj = new homePage();
-		expect(homePageObj.welcomeTitle.getText()).to.eventually.equal('Welcome to SportLynx!')
+	this.Then(/^I should see paragraph '(.*)'$/, function (value, callback) {
+		var loginPageObj = new logInPage();
+		expect(loginPageObj.accessDeniedParagraph.getText()).to.eventually.equal(value)
 	    .then(function(){
 	    	callback();
 	    });
